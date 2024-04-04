@@ -15,8 +15,15 @@ function generateManifest() {
 export default defineConfig({
   plugins: [
     webExtension({
+      additionalInputs: ["src/content_module.ts"],
       manifest: generateManifest,
       watchFilePaths: ["package.json", "manifest.json"],
+      scriptViteConfig: {
+        build: {
+          // Top level await is only available in ESNext
+          target: "ESNext"
+        }
+      }
     }),
   ],
 });

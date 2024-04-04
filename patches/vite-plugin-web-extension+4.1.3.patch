@@ -1,0 +1,26 @@
+diff --git a/node_modules/vite-plugin-web-extension/dist/index.cjs b/node_modules/vite-plugin-web-extension/dist/index.cjs
+index 3711278..fc3f07a 100644
+--- a/node_modules/vite-plugin-web-extension/dist/index.cjs
++++ b/node_modules/vite-plugin-web-extension/dist/index.cjs
+@@ -571,7 +571,7 @@ function getViteConfigsForInputs(options) {
+         lib: {
+           name: "_",
+           entry,
+-          formats: ["iife"],
++          formats: ["es"],
+           fileName: () => moduleId + ".js"
+         }
+       },
+diff --git a/node_modules/vite-plugin-web-extension/dist/index.js b/node_modules/vite-plugin-web-extension/dist/index.js
+index c6d0d9d..caa37a2 100644
+--- a/node_modules/vite-plugin-web-extension/dist/index.js
++++ b/node_modules/vite-plugin-web-extension/dist/index.js
+@@ -534,7 +534,7 @@ function getViteConfigsForInputs(options) {
+         lib: {
+           name: "_",
+           entry,
+-          formats: ["iife"],
++          formats: ["es"],
+           fileName: () => moduleId + ".js"
+         }
+       },
